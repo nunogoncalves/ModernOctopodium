@@ -30,7 +30,9 @@ struct LanguagesView: View {
                     .padding(10)
                 List {
                     ForEach(filteredLanguages, id: \.self) { language in
-                        LanguageRow(language: language)
+                        NavigationLink(destination: LanguageRankingView(language: language)) {
+                            LanguageRow(language: language)
+                        }
                     }
                 }
             }
@@ -46,7 +48,7 @@ struct LanguagesView: View {
 
     var filteredLanguages: [String] {
         if filterText.isEmpty { return languages }
-        let resultPredicate = NSPredicate.containing(String(filterText))
+        let resultPredicate = NSPredicate.containing(filterText)
         return languages.filter { resultPredicate.evaluate(with: $0) }
     }
 }
