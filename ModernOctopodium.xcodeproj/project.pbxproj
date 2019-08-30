@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		854F4EFD2319D94600C67FA4 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4EFC2319D94600C67FA4 /* Text+Extensions.swift */; };
+		854F4F032319EC2C00C67FA4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4F022319EC2C00C67FA4 /* HomeView.swift */; };
+		854F4F082319EE1300C67FA4 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4F072319EE1300C67FA4 /* UsersView.swift */; };
+		854F4F0A2319EE2A00C67FA4 /* TrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4F092319EE2A00C67FA4 /* TrendingView.swift */; };
+		854F4F0C2319EE3E00C67FA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4F0B2319EE3E00C67FA4 /* SettingsView.swift */; };
 		8576496523192AB200DF0899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8576496423192AB200DF0899 /* AppDelegate.swift */; };
 		8576496723192AB200DF0899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8576496623192AB200DF0899 /* SceneDelegate.swift */; };
 		8576496B23192AB400DF0899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8576496A23192AB400DF0899 /* Assets.xcassets */; };
@@ -26,6 +30,11 @@
 
 /* Begin PBXFileReference section */
 		854F4EFC2319D94600C67FA4 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
+		854F4F002319EB6D00C67FA4 /* ModernOctopodium.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ModernOctopodium.entitlements; sourceTree = "<group>"; };
+		854F4F022319EC2C00C67FA4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		854F4F072319EE1300C67FA4 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		854F4F092319EE2A00C67FA4 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
+		854F4F0B2319EE3E00C67FA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8576496123192AB200DF0899 /* ModernOctopodium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModernOctopodium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8576496423192AB200DF0899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8576496623192AB200DF0899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +72,38 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		854F4F012319EC1A00C67FA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				854F4F022319EC2C00C67FA4 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		854F4F042319EDED00C67FA4 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				854F4F072319EE1300C67FA4 /* UsersView.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		854F4F052319EDF300C67FA4 /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				854F4F092319EE2A00C67FA4 /* TrendingView.swift */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		854F4F062319EDFB00C67FA4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				854F4F0B2319EE3E00C67FA4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		8576495823192AB200DF0899 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +123,7 @@
 		8576496323192AB200DF0899 /* ModernOctopodium */ = {
 			isa = PBXGroup;
 			children = (
+				854F4F002319EB6D00C67FA4 /* ModernOctopodium.entitlements */,
 				854F4EFB2319D92F00C67FA4 /* Extensions */,
 				85764978231930DA00DF0899 /* Contexts */,
 				85764979231930E900DF0899 /* Models */,
@@ -107,7 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				859028652319D3330053100F /* Ranking */,
+				854F4F012319EC1A00C67FA4 /* Home */,
 				8576497C2319312600DF0899 /* Languages */,
+				859028652319D3330053100F /* Ranking */,
+				854F4F062319EDFB00C67FA4 /* Settings */,
+				854F4F052319EDF300C67FA4 /* Trending */,
+				854F4F042319EDED00C67FA4 /* Users */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -215,10 +262,14 @@
 			files = (
 				8576497B2319310200DF0899 /* LanguagesView.swift in Sources */,
 				8576497E2319317500DF0899 /* LanguagesViewModel.swift in Sources */,
+                854F4F032319EC2C00C67FA4 /* HomeView.swift in Sources */,
+				854F4F0A2319EE2A00C67FA4 /* TrendingView.swift in Sources */,
 				8576496523192AB200DF0899 /* AppDelegate.swift in Sources */,
 				8576496723192AB200DF0899 /* SceneDelegate.swift in Sources */,
+				854F4F082319EE1300C67FA4 /* UsersView.swift in Sources */,
 				8590286D2319D4300053100F /* Users.swift in Sources */,
 				859028672319D3440053100F /* LanguageRankingView.swift in Sources */,
+				854F4F0C2319EE3E00C67FA4 /* SettingsView.swift in Sources */,
 				857649842319382F00DF0899 /* LanguageImage.swift in Sources */,
 				859028692319D3850053100F /* LanguageRankingDataSource.swift in Sources */,
 				854F4EFD2319D94600C67FA4 /* Text+Extensions.swift in Sources */,
@@ -360,7 +411,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ModernOctopodium/ModernOctopodium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ModernOctopodium/Preview Content\"";
 				DEVELOPMENT_TEAM = 9D23XSN84S;
 				ENABLE_PREVIEWS = YES;
@@ -371,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ModernOctopodium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,7 +434,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ModernOctopodium/ModernOctopodium.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ModernOctopodium/Preview Content\"";
 				DEVELOPMENT_TEAM = 9D23XSN84S;
 				ENABLE_PREVIEWS = YES;
@@ -391,6 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ModernOctopodium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
