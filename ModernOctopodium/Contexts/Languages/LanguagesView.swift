@@ -18,20 +18,24 @@ struct LanguagesView: View {
 
     @State var languages: [String] = []
     @State var filterText = ""
-    @State var isLoading: Bool = false
+    @State var isLoading: Bool = true
 
     var body: some View {
         NavigationView {
             VStack {
-                TextField("Filter", text: $filterText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .accentColor(.white)
-                    .cornerRadius(5)
-                    .padding(10)
-                List {
-                    ForEach(filteredLanguages, id: \.self) { language in
-                        NavigationLink(destination: LanguageRankingView(language: language)) {
-                            LanguageRow(language: language)
+                if isLoading {
+                    GithubLoadingView()
+                } else {
+                    TextField("Filter", text: $filterText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .accentColor(.white)
+                        .cornerRadius(5)
+                        .padding(10)
+                    List {
+                        ForEach(filteredLanguages, id: \.self) { language in
+                            NavigationLink(destination: LanguageRankingView(language: language)) {
+                                LanguageRow(language: language)
+                            }
                         }
                     }
                 }
@@ -42,7 +46,10 @@ struct LanguagesView: View {
 
             _ = self.viewModel.searchLanguages
                 .receive(on: DispatchQueue.main)
-                .assign(to: \.languages, on: self)
+                .sink { languages in
+                    self.isLoading = false
+                    self.languages = languages
+                }
         }
     }
 
